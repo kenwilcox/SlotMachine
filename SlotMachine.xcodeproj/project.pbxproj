@@ -13,6 +13,7 @@
 		BE01B41A1A532BE200892784 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE01B4191A532BE200892784 /* Images.xcassets */; };
 		BE01B41D1A532BE200892784 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE01B41B1A532BE200892784 /* LaunchScreen.xib */; };
 		BE01B4291A532BE200892784 /* SlotMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE01B4281A532BE200892784 /* SlotMachineTests.swift */; };
+		BE01B4341A533B2C00892784 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = BE01B4321A533B2C00892784 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,8 @@
 		BE01B4221A532BE200892784 /* SlotMachineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SlotMachineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE01B4271A532BE200892784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE01B4281A532BE200892784 /* SlotMachineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotMachineTests.swift; sourceTree = "<group>"; };
+		BE01B4321A533B2C00892784 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		BE01B4331A533B2C00892784 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,8 @@
 		BE01B4041A532BE200892784 = {
 			isa = PBXGroup;
 			children = (
+				BE01B4321A533B2C00892784 /* LICENSE */,
+				BE01B4331A533B2C00892784 /* README.md */,
 				BE01B40F1A532BE200892784 /* SlotMachine */,
 				BE01B4251A532BE200892784 /* SlotMachineTests */,
 				BE01B40E1A532BE200892784 /* Products */,
@@ -194,6 +199,7 @@
 			files = (
 				BE01B4181A532BE200892784 /* Main.storyboard in Resources */,
 				BE01B41D1A532BE200892784 /* LaunchScreen.xib in Resources */,
+				BE01B4341A533B2C00892784 /* LICENSE in Resources */,
 				BE01B41A1A532BE200892784 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
