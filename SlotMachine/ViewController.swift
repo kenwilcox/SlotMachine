@@ -67,7 +67,7 @@ class ViewController: UIViewController {
     self.titleLabel.textColor = UIColor.yellowColor()
     self.titleLabel.font = UIFont(name: "MarkerFelt-Wide", size: 40)
     self.titleLabel.sizeToFit()
-    self.titleLabel.center = containerView.center
+    self.titleLabel.center = CGPoint(x: containerView.frame.width * 0.5, y: containerView.frame.height * 0.5)
     containerView.addSubview(self.titleLabel)
   }
 }
