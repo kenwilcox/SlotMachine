@@ -30,19 +30,30 @@ class ViewController: UIViewController {
   }
   
   func setupContainerViews() {
-    self.firstContainer = UIView(frame: CGRect(x: self.view.bounds.origin.x + kMarginForView, y: self.view.bounds.origin.y, width: self.view.bounds.width - (kMarginForView * 2), height: self.view.bounds.height * kSixth))
+    let viewWidth = self.view.bounds.width - (kMarginForView * 2)
+    let viewHeight = self.view.bounds.height * kSixth
+    let viewX = self.view.bounds.origin.x + kMarginForView
+    var viewY = self.view.bounds.origin.y
+    
+    self.firstContainer = UIView(frame: CGRect(x: viewX, y: viewY, width: viewWidth, height: viewHeight))
     self.firstContainer.backgroundColor = UIColor.redColor()
     self.view.addSubview(self.firstContainer)
     
-    self.secondContainer = UIView(frame: CGRect(x: self.view.bounds.origin.x + kMarginForView, y: firstContainer.frame.height, width: self.view.bounds.width - (kMarginForView * 2), height: self.view.bounds.height * (3 * kSixth)))
+    viewY += firstContainer.frame.height
+    
+    self.secondContainer = UIView(frame: CGRect(x: viewX, y: viewY, width: viewWidth, height: viewHeight * 3))
     self.secondContainer.backgroundColor = UIColor.blackColor()
     self.view.addSubview(self.secondContainer)
     
-    self.thirdContainer = UIView(frame: CGRect(x: self.view.bounds.origin.x + kMarginForView, y: firstContainer.frame.height + secondContainer.frame.height, width: self.view.bounds.width - (kMarginForView * 2), height: self.view.bounds.height * kSixth))
+    viewY += secondContainer.frame.height
+    
+    self.thirdContainer = UIView(frame: CGRect(x: viewX, y: viewY, width: viewWidth, height: viewHeight))
     self.thirdContainer.backgroundColor = UIColor.lightGrayColor()
     self.view.addSubview(self.thirdContainer)
     
-    self.fourthContainer = UIView(frame: CGRect(x: self.view.bounds.origin.x + kMarginForView, y: firstContainer.frame.height + secondContainer.frame.height + thirdContainer.frame.height, width: self.view.bounds.width - (kMarginForView * 2), height: self.view.bounds.height * kSixth))
+    viewY += thirdContainer.frame.height
+    
+    self.fourthContainer = UIView(frame: CGRect(x: viewX, y: viewY, width: viewWidth, height: viewHeight))
     self.fourthContainer.backgroundColor = UIColor.blackColor()
     self.view.addSubview(self.fourthContainer)
   }
