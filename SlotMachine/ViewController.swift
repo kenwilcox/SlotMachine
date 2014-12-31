@@ -22,7 +22,7 @@ class ViewController: UIViewController {
   
   let kNumberOfContainers = 3
   let kNumberOfSlots = 3
-  let kThird:CGFloat = 1.0 / 3.0
+  //let kThird:CGFloat = 1.0 / 3.0
   let kMarginForSlot:CGFloat = 2.0
   
   override func viewDidLoad() {
