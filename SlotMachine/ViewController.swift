@@ -20,9 +20,9 @@ class ViewController: UIViewController {
   let kMarginForView: CGFloat = 10.0
   let kSixth: CGFloat = 1.0/6.0
   
-  let kNumberOfContainers = 3
-  let kNumberOfSlots = 3
-  let kThird:CGFloat = 1.0 / 3.0
+  let kNumberOfContainers = 5
+  let kNumberOfSlots = 5
+  let kThird:CGFloat = 1.0 / 5.0
   let kMarginForSlot:CGFloat = 2.0
   
   override func viewDidLoad() {
@@ -84,7 +84,9 @@ class ViewController: UIViewController {
         
         slotImageView.backgroundColor = UIColor.yellowColor()
         
-        slotImageView.frame = CGRect(x: containerView.bounds.origin.x + (containerView.bounds.size.width * CGFloat(containerNumber) * kThird), y: containerView.bounds.origin.y + (containerView.bounds.size.height * CGFloat(slotNumber) * kThird), width: containerView.bounds.width * kThird - kMarginForSlot, height: containerView.bounds.height * kThird - kMarginForSlot)
+//        slotImageView.frame = CGRect(x: containerView.bounds.origin.x + (containerView.bounds.size.width * CGFloat(containerNumber) * kThird), y: containerView.bounds.origin.y + (containerView.bounds.size.height * CGFloat(slotNumber) * kThird), width: containerView.bounds.width * kThird - kMarginForSlot, height: containerView.bounds.height * kThird - kMarginForSlot)
+    
+        slotImageView.frame = CGRect(x: containerView.bounds.origin.x + kMarginForSlot + ((containerView.bounds.size.width - kMarginForSlot) * CGFloat(containerNumber) / CGFloat(kNumberOfContainers)), y: containerView.bounds.origin.y + kMarginForSlot + ((containerView.bounds.size.height - kMarginForSlot) * CGFloat(slotNumber) / CGFloat(kNumberOfSlots)), width: (containerView.bounds.width - kMarginForSlot) / CGFloat(kNumberOfContainers) - kMarginForSlot, height: (containerView.bounds.height - kMarginForSlot) / CGFloat(kNumberOfSlots) - kMarginForSlot)
         
         containerView.addSubview(slotImageView)
       }
