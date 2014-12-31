@@ -17,6 +17,7 @@ class ViewController: UIViewController {
   
   var titleLabel: UILabel!
   
+  // Information labels
   var creditsLabel: UILabel!
   var betLabel: UILabel!
   var winnerPaidLabel: UILabel!
@@ -24,11 +25,19 @@ class ViewController: UIViewController {
   var betTitleLabel: UILabel!
   var winnerPaidTitleLabel: UILabel!
   
+  // Buttons in fourth container
+  var resetButton: UIButton!
+  var betOneButton: UIButton!
+  var betMaxButton: UIButton!
+  var spinButton: UIButton!
+  
   let kMarginForView: CGFloat = 10.0
   let kMarginForSlot:CGFloat = 2.0
   
   let kSixth: CGFloat = 1.0/6.0
   let kThird:CGFloat = 1.0 / 3.0
+  let kHalf: CGFloat = 1.0/2.0
+  let kEighth: CGFloat = 1.0/8.0
   
   let kNumberOfContainers = 3
   let kNumberOfSlots = 3
@@ -41,6 +50,7 @@ class ViewController: UIViewController {
     self.setupFirstContainer(self.firstContainer)
     self.setupSecondContainer(self.secondContainer)
     self.setupThirdContainer(self.thirdContainer)
+    self.setupFourthContainer(self.fourthContainer)
   }
 
   override func didReceiveMemoryWarning() {
@@ -142,6 +152,18 @@ class ViewController: UIViewController {
     setupStaticLabel(self.betTitleLabel, "Bet", 1)
     setupStaticLabel(self.winnerPaidTitleLabel, "Winner Paid", 2)
     
+  }
+  
+  func setupFourthContainer (containerView: UIView) {
+    self.resetButton = UIButton()
+    self.resetButton.setTitle("Reset", forState: .Normal)
+    self.resetButton.setTitleColor(UIColor.blueColor(), forState: .Normal)
+    self.resetButton.titleLabel?.font = UIFont(name: "Superclarendon-Bold", size: 12)
+    self.resetButton.backgroundColor = UIColor.lightGrayColor()
+    self.resetButton.sizeToFit()
+    self.resetButton.center = CGPoint(x: containerView.frame.width * kEighth, y: containerView.frame.height * kHalf)
+    self.resetButton.addTarget(self, action: "resetButtonPressed:", forControlEvents: .TouchUpInside)
+    containerView.addSubview(self.resetButton)
   }
 }
 
