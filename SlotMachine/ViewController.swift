@@ -102,15 +102,26 @@ class ViewController: UIViewController {
   }
   
   func setupThirdContainer(containerView: UIView) {
+    
+    func setupLabel(label: UILabel, position: Int, size: Int) {
+      var zeros = ""
+      label.text = zeros.stringByPaddingToLength(size, withString: "0", startingAtIndex: 0)
+      label.textColor = UIColor.redColor()
+      label.font = UIFont(name: "Menlo-Bold", size: 16)
+      label.sizeToFit()
+      label.center = CGPoint(x: containerView.frame.width * kSixth * CGFloat(position * 2+1), y: containerView.frame.height * kThird)
+      label.textAlignment = .Center
+      label.backgroundColor = UIColor.darkGrayColor()
+      containerView.addSubview(label)
+    }
+  
     self.creditsLabel = UILabel()
-    self.creditsLabel.text = "000000"
-    self.creditsLabel.textColor = UIColor.redColor()
-    self.creditsLabel.font = UIFont(name: "Menlo-Bold", size: 16)
-    self.creditsLabel.sizeToFit()
-    self.creditsLabel.center = CGPoint(x: containerView.frame.width * kSixth, y: containerView.frame.height * kThird)
-    self.creditsLabel.textAlignment = .Center
-    self.creditsLabel.backgroundColor = UIColor.darkGrayColor()
-    containerView.addSubview(self.creditsLabel)
+    self.betLabel = UILabel()
+    self.winnerPaidLabel = UILabel()
+    
+    setupLabel(self.creditsLabel, 0, 6)
+    setupLabel(self.betLabel, 1, 4)
+    setupLabel(self.winnerPaidLabel, 2, 6)
   }
 }
 
