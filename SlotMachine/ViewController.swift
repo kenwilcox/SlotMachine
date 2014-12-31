@@ -17,12 +17,19 @@ class ViewController: UIViewController {
   
   var titleLabel: UILabel!
   
+  var creditsLabel: UILabel!
+  var betLabel: UILabel!
+  var winnerPaidLabel: UILabel!
+  var creditsTitleLabel: UILabel!
+  var betTitleLabel: UILabel!
+  var winnerPaidTitleLabel: UILabel!
+  
   let kMarginForView: CGFloat = 10.0
   let kSixth: CGFloat = 1.0/6.0
   
   let kNumberOfContainers = 3
   let kNumberOfSlots = 3
-  //let kThird:CGFloat = 1.0 / 3.0
+  let kThird:CGFloat = 1.0 / 3.0
   let kMarginForSlot:CGFloat = 2.0
   
   override func viewDidLoad() {
@@ -31,6 +38,7 @@ class ViewController: UIViewController {
     self.setupContainerViews()
     self.setupFirstContainer(self.firstContainer)
     self.setupSecondContainer(self.secondContainer)
+    self.setupThirdContainer(self.thirdContainer)
   }
 
   override func didReceiveMemoryWarning() {
@@ -91,6 +99,18 @@ class ViewController: UIViewController {
         containerView.addSubview(slotImageView)
       }
     }
+  }
+  
+  func setupThirdContainer(containerView: UIView) {
+    self.creditsLabel = UILabel()
+    self.creditsLabel.text = "000000"
+    self.creditsLabel.textColor = UIColor.redColor()
+    self.creditsLabel.font = UIFont(name: "Menlo-Bold", size: 16)
+    self.creditsLabel.sizeToFit()
+    self.creditsLabel.center = CGPoint(x: containerView.frame.width * kSixth, y: containerView.frame.height * kThird)
+    self.creditsLabel.textAlignment = .Center
+    self.creditsLabel.backgroundColor = UIColor.darkGrayColor()
+    containerView.addSubview(self.creditsLabel)
   }
 }
 
