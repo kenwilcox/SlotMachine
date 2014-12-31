@@ -47,10 +47,6 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     self.setupContainerViews()
-    self.setupFirstContainer(self.firstContainer)
-    self.setupSecondContainer(self.secondContainer)
-    self.setupThirdContainer(self.thirdContainer)
-    self.setupFourthContainer(self.fourthContainer)
   }
 
   override func didReceiveMemoryWarning() {
@@ -90,6 +86,12 @@ class ViewController: UIViewController {
     self.fourthContainer = UIView(frame: CGRect(x: viewX, y: viewY, width: viewWidth, height: viewHeight))
     self.fourthContainer.backgroundColor = UIColor.blackColor()
     self.view.addSubview(self.fourthContainer)
+    
+    // Setup Containers
+    self.setupFirstContainer(self.firstContainer)
+    self.setupSecondContainer(self.secondContainer)
+    self.setupThirdContainer(self.thirdContainer)
+    self.setupFourthContainer(self.fourthContainer)
   }
   
   func setupFirstContainer(containerView: UIView) {
