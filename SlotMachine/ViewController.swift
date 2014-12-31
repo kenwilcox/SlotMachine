@@ -126,7 +126,7 @@ class ViewController: UIViewController {
   
   func setupThirdContainer(containerView: UIView) {
     
-    func setupLabel(label: UILabel, position: Int, size: Int) {
+    func setupLabel(label: UILabel, #position: Int, #size: Int) {
       var zeros = ""
       label.text = zeros.stringByPaddingToLength(size, withString: "0", startingAtIndex: 0)
       label.textColor = UIColor.redColor()
@@ -138,7 +138,7 @@ class ViewController: UIViewController {
       containerView.addSubview(label)
     }
   
-    func setupStaticLabel(label: UILabel, text: String, position: Int) {
+    func setupStaticLabel(label: UILabel, #text: String, #position: Int) {
       label.text = text
       label.textColor = UIColor.blackColor()
       label.font = UIFont(name: "AmericanTypewriter", size: 14)
@@ -151,17 +151,17 @@ class ViewController: UIViewController {
     self.betLabel = UILabel()
     self.winnerPaidLabel = UILabel()
     
-    setupLabel(self.creditsLabel, 0, 6)
-    setupLabel(self.betLabel, 1, 4)
-    setupLabel(self.winnerPaidLabel, 2, 6)
+    setupLabel(self.creditsLabel, position: 0, size: 6)
+    setupLabel(self.betLabel, position: 1, size: 4)
+    setupLabel(self.winnerPaidLabel, position: 2, size: 6)
     
     self.creditsTitleLabel = UILabel()
     self.betTitleLabel = UILabel()
     self.winnerPaidTitleLabel = UILabel()
     
-    setupStaticLabel(self.creditsTitleLabel, "Credits", 0)
-    setupStaticLabel(self.betTitleLabel, "Bet", 1)
-    setupStaticLabel(self.winnerPaidTitleLabel, "Winner Paid", 2)
+    setupStaticLabel(self.creditsTitleLabel, text: "Credits", position: 0)
+    setupStaticLabel(self.betTitleLabel, text: "Bet", position: 1)
+    setupStaticLabel(self.winnerPaidTitleLabel, text: "Winner Paid", position: 2)
     
   }
   
