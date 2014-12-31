@@ -20,9 +20,9 @@ class ViewController: UIViewController {
   let kMarginForView: CGFloat = 10.0
   let kSixth: CGFloat = 1.0/6.0
   
-  let kNumberOfContainers = 5
-  let kNumberOfSlots = 5
-  let kThird:CGFloat = 1.0 / 5.0
+  let kNumberOfContainers = 3
+  let kNumberOfSlots = 3
+  let kThird:CGFloat = 1.0 / 3.0
   let kMarginForSlot:CGFloat = 2.0
   
   override func viewDidLoad() {
