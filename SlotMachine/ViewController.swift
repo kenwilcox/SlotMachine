@@ -58,6 +58,11 @@ class ViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
+  // IBActions
+  func resetButtonPressed(button: UIButton) {
+    println("resetButtonPressed")
+  }
+  
   func setupContainerViews() {
     let viewWidth = self.view.bounds.width - (kMarginForView * 2)
     let viewHeight = self.view.bounds.height * kSixth
