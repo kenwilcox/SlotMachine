@@ -32,6 +32,9 @@ class ViewController: UIViewController {
   var spinButton: UIButton!
   
   var slots: [[Slot]] = []
+  var credits = 0
+  var currentBet = 0
+  var winnings = 0
   
   let kMarginForView: CGFloat = 10.0
   let kMarginForSlot:CGFloat = 2.0
@@ -49,6 +52,7 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     self.setupContainerViews()
+    self.hardReset()
   }
 
   override func didReceiveMemoryWarning() {
@@ -58,7 +62,7 @@ class ViewController: UIViewController {
   
   // IBActions
   func resetButtonPressed(button: UIButton) {
-    println("resetButtonPressed")
+    self.hardReset()
   }
   
   func betOneButtonPressed (button: UIButton) {
@@ -232,6 +236,14 @@ class ViewController: UIViewController {
     self.spinButton.center = CGPoint(x: containerView.frame.width * 7 * kEighth, y: containerView.frame.height * kHalf)
     self.spinButton.addTarget(self, action: "spinButtonPressed:", forControlEvents: UIControlEvents.TouchUpInside)
     containerView.addSubview(self.spinButton)
+  }
+  
+  func hardReset() {
+    slots.removeAll(keepCapacity: true)
+    self.setupSecondContainer(self.secondContainer)
+    self.credits = 50
+    self.winnings = 0
+    self.currentBet = 0
   }
 }
 
