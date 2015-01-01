@@ -22,10 +22,16 @@ class SlotBrain {
         flushWinCount += 1
       }
       
-      if checkInARow(slotRow) {
+      if checkInARow(slotRow) == true {
         println("\(slotRow.count) in a row")
         winnings += 1
         straightWinCount += 1
+      }
+      
+      if ofAKind(slotRow) == true {
+        println("\(slotRow.count) of a kind")
+        winnings += 3
+        threeOfAKindWinCount += 1
       }
     }
     
@@ -37,6 +43,11 @@ class SlotBrain {
     if straightWinCount == slots.count {
       println("Epic straight")
       winnings += 1000
+    }
+    
+    if threeOfAKindWinCount == slots.count {
+      println("Threes all around")
+      winnings += 50
     }
     
     return winnings
@@ -69,6 +80,16 @@ class SlotBrain {
     
     for (i, value) in enumerate(values) {
       if i > 0 && value != values[i - 1] + 1 {
+        return false
+      }
+    }
+    return true
+  }
+  
+  class func ofAKind(slotRow: [Slot]) -> Bool {
+    let firstValue = slotRow[0].value
+    for slot in slotRow {
+      if firstValue != slot.value {
         return false
       }
     }
