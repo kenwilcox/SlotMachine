@@ -107,6 +107,9 @@ class ViewController: UIViewController {
     if self.credits < 5 {
       maxBet = self.credits
     }
+    else {
+      maxBet -= self.currentBet
+    }
     
     if maxBet > 0 && self.currentBet + maxBet <= 5 {
       self.credits -= maxBet
