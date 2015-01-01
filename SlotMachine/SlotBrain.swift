@@ -14,10 +14,43 @@ class SlotBrain {
     var flushWinCount = 0
     var threeOfAKindWinCount = 0
     var straightWinCount = 0
+    
     for slotRow in slots {
+      if checkFlush(slotRow) == true {
+        println("flush")
+        winnings += 1
+        flushWinCount += 1
+      }
       
     }
+    
+    if flushWinCount == slots.count {
+      println("Royal Flush")
+      winnings += 15
+    }
+    
     return winnings
+  }
+  
+  class func checkFlush(slotRow: [Slot]) -> Bool {
+    var redColorCount = 0
+    var blackColorCount = 0
+    
+    for slot in slotRow {
+      if slot.isRed {
+        redColorCount++
+      }
+      else {
+        blackColorCount++
+      }
+    }
+
+    if redColorCount == slotRow.count || blackColorCount == slotRow.count {
+      return true
+    }
+    else {
+      return false
+    }
   }
   
 }
