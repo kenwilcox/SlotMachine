@@ -16,6 +16,7 @@
 		BE01B4341A533B2C00892784 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = BE01B4321A533B2C00892784 /* LICENSE */; };
 		BE0620131A551D38006C2B42 /* Slot.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0620121A551D38006C2B42 /* Slot.swift */; };
 		BE0620151A55208F006C2B42 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0620141A55208F006C2B42 /* Factory.swift */; };
+		BE0620171A552678006C2B42 /* SlotConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0620161A552678006C2B42 /* SlotConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		BE01B4331A533B2C00892784 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BE0620121A551D38006C2B42 /* Slot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slot.swift; sourceTree = "<group>"; };
 		BE0620141A55208F006C2B42 /* Factory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		BE0620161A552678006C2B42 /* SlotConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				BE01B4121A532BE200892784 /* AppDelegate.swift */,
 				BE01B4141A532BE200892784 /* ViewController.swift */,
 				BE0620141A55208F006C2B42 /* Factory.swift */,
+				BE0620161A552678006C2B42 /* SlotConstants.swift */,
 				BE0620121A551D38006C2B42 /* Slot.swift */,
 				BE01B4161A532BE200892784 /* Main.storyboard */,
 				BE01B4191A532BE200892784 /* Images.xcassets */,
@@ -224,6 +227,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE0620171A552678006C2B42 /* SlotConstants.swift in Sources */,
 				BE0620151A55208F006C2B42 /* Factory.swift in Sources */,
 				BE01B4151A532BE200892784 /* ViewController.swift in Sources */,
 				BE0620131A551D38006C2B42 /* Slot.swift in Sources */,
