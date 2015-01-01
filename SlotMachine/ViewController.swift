@@ -31,6 +31,8 @@ class ViewController: UIViewController {
   var betMaxButton: UIButton!
   var spinButton: UIButton!
   
+  var slots: [[Slot]] = []
+  
   let kMarginForView: CGFloat = 10.0
   let kMarginForSlot:CGFloat = 2.0
   
@@ -68,7 +70,8 @@ class ViewController: UIViewController {
   }
   
   func spinButtonPressed (button: UIButton) {
-    println("spinButtonPressed")
+    self.slots = Factory.createSlots()
+    setupSecondContainer(self.secondContainer)
   }
   
   func setupContainerViews() {
@@ -119,7 +122,17 @@ class ViewController: UIViewController {
   func setupSecondContainer(containerView: UIView) {
     for var containerNumber = 0; containerNumber < kNumberOfContainers; ++containerNumber {
       for var slotNumber = 0; slotNumber < kNumberOfSlots; ++slotNumber {
+        var slot: Slot
         var slotImageView = UIImageView()
+        
+        if slots.count != 0 {
+          let slotContainer = slots[containerNumber]
+          slot = slotContainer[slotNumber]
+          slotImageView.image = slot.image
+        }
+        else {
+          slotImageView.image = UIImage(named: "Ace")
+        }
         
         slotImageView.backgroundColor = UIColor.yellowColor()
         
