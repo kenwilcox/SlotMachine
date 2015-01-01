@@ -120,6 +120,10 @@ class ViewController: UIViewController {
   }
   
   func setupSecondContainer(containerView: UIView) {
+    for view in containerView.subviews{
+      view.removeFromSuperview()
+    }
+
     for var containerNumber = 0; containerNumber < kNumberOfContainers; ++containerNumber {
       for var slotNumber = 0; slotNumber < kNumberOfSlots; ++slotNumber {
         var slot: Slot
@@ -143,6 +147,8 @@ class ViewController: UIViewController {
         containerView.addSubview(slotImageView)
       }
     }
+    
+    //println("\(containerView.subviews.count)")
   }
   
   func setupThirdContainer(containerView: UIView) {
