@@ -15,14 +15,14 @@ class Factory {
     let kNumberOfSlots = 3
     let kNumberOfContainers = 3
     var slots: [[Slot]] = []
-    var pickedSlot: [Slot] = []
+    //var pickedSlot: [Slot] = []
     
     for var containerNumber = 0; containerNumber < kNumberOfContainers; ++containerNumber {
       var slotArray:[Slot] = []
       for var slotNumber = 0; slotNumber < kNumberOfSlots; ++slotNumber {
-        var slot = Factory.createSlot(pickedSlot)
+        var slot = Factory.createSlot(slotArray)
         slotArray.append(slot)
-        pickedSlot.append(slot)
+        //pickedSlot.append(slot)
       }
       slots.append(slotArray)
     }
