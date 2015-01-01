@@ -265,5 +265,11 @@ class ViewController: UIViewController {
     self.winnings = 0
     self.currentBet = 0
   }
+  
+  func showAlertWithText(header: String = "Warning", message: String) {
+    var alert = UIAlertController(title: header, message: message, preferredStyle: .Alert)
+    alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+    self.presentViewController(alert, animated: true, completion: nil)
+  }
 }
 
