@@ -18,6 +18,8 @@
 		BE0620151A55208F006C2B42 /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0620141A55208F006C2B42 /* Factory.swift */; };
 		BE0620171A552678006C2B42 /* SlotConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0620161A552678006C2B42 /* SlotConstants.swift */; };
 		BE5776921A55C715006A13AE /* SlotBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5776911A55C715006A13AE /* SlotBrain.swift */; };
+		BE5776931A55D0A4006A13AE /* Slot.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0620121A551D38006C2B42 /* Slot.swift */; };
+		BE5776941A55D0AD006A13AE /* SlotBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5776911A55C715006A13AE /* SlotBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -244,6 +246,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE01B4291A532BE200892784 /* SlotMachineTests.swift in Sources */,
+				BE5776941A55D0AD006A13AE /* SlotBrain.swift in Sources */,
+				BE5776931A55D0A4006A13AE /* Slot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
