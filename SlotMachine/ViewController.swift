@@ -32,9 +32,6 @@ class ViewController: UIViewController {
   var spinButton: UIButton!
   
   var slots: [[Slot]] = []
-  var credits = 0
-  var currentBet = 0
-  var winnings = 0
   
   let kMarginForView: CGFloat = 10.0
   let kMarginForSlot:CGFloat = 2.0
@@ -47,6 +44,29 @@ class ViewController: UIViewController {
   let kNumberOfContainers = 3
   let kNumberOfSlots = 3
 
+  var credits: Int = 0 {
+    didSet {
+      if credits != oldValue {
+        self.creditsLabel.text = "\(credits)"
+      }
+    }
+  }
+  
+  var currentBet: Int = -1 {
+    didSet {
+      if currentBet != oldValue {
+        self.betLabel.text = "\(currentBet)"
+      }
+    }
+  }
+  
+  var winnings: Int = -1 {
+    didSet {
+      if winnings != oldValue {
+        self.winnerPaidLabel.text = "\(winnings)"
+      }
+    }
+  }
   
   override func viewDidLoad() {
     super.viewDidLoad()
