@@ -86,17 +86,18 @@ class ViewController: UIViewController {
   }
   
   func betOneButtonPressed (button: UIButton) {
-    if self.credits <= 0 {
+    if self.credits <= 0 && self.currentBet == 0 {
       self.showAlertWithText(header: "No More Credits", message: "Reset Game")
     }
+    else if self.credits == 0 {
+      self.showAlertWithText(header: "No More Credits", message: "You have reached your max bet amount")
+    }
+    else if self.currentBet < 5 {
+      self.currentBet += 1
+      self.credits -= 1
+    }
     else {
-      if self.currentBet < 5 {
-        self.currentBet += 1
-        self.credits -= 1
-      }
-      else {
-        self.showAlertWithText(message: "You can only bet 5 credits at a time!")
-      }
+      self.showAlertWithText(message: "You can only bet 5 credits at a time!")
     }
   }
   
@@ -272,7 +273,7 @@ class ViewController: UIViewController {
   func hardReset() {
     slots.removeAll(keepCapacity: true)
     self.setupSecondContainer(self.secondContainer)
-    self.credits = 50
+    self.credits = 4
     self.winnings = 0
     self.currentBet = 0
   }
