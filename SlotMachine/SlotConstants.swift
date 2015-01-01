@@ -22,7 +22,7 @@ struct SlotConstants {
     Slot(value: 9, image:UIImage(named:"Nine"), isRed: false),
     Slot(value: 10, image:UIImage(named:"Ten"), isRed: true),
     Slot(value: 11, image:UIImage(named:"Jack"), isRed: false),
-    Slot(value: 12, image:UIImage(named:"Queen"), isRed: true),
+    Slot(value: 12, image:UIImage(named:"Queen"), isRed: false),
     Slot(value: 13, image:UIImage(named:"King"), isRed: true),
   ]
 }
