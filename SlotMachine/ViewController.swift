@@ -268,7 +268,7 @@ class ViewController: UIViewController {
   
   func showAlertWithText(header: String = "Warning", message: String) {
     var alert = UIAlertController(title: header, message: message, preferredStyle: .Alert)
-    alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: nil))
+    alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
     self.presentViewController(alert, animated: true, completion: nil)
   }
 }
