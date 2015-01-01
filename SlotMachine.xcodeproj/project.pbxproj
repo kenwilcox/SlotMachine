@@ -14,6 +14,7 @@
 		BE01B41D1A532BE200892784 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE01B41B1A532BE200892784 /* LaunchScreen.xib */; };
 		BE01B4291A532BE200892784 /* SlotMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE01B4281A532BE200892784 /* SlotMachineTests.swift */; };
 		BE01B4341A533B2C00892784 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = BE01B4321A533B2C00892784 /* LICENSE */; };
+		BE0620131A551D38006C2B42 /* Slot.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0620121A551D38006C2B42 /* Slot.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		BE01B4281A532BE200892784 /* SlotMachineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotMachineTests.swift; sourceTree = "<group>"; };
 		BE01B4321A533B2C00892784 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		BE01B4331A533B2C00892784 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BE0620121A551D38006C2B42 /* Slot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				BE01B4121A532BE200892784 /* AppDelegate.swift */,
+				BE0620121A551D38006C2B42 /* Slot.swift */,
 				BE01B4141A532BE200892784 /* ViewController.swift */,
 				BE01B4161A532BE200892784 /* Main.storyboard */,
 				BE01B4191A532BE200892784 /* Images.xcassets */,
@@ -219,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE01B4151A532BE200892784 /* ViewController.swift in Sources */,
+				BE0620131A551D38006C2B42 /* Slot.swift in Sources */,
 				BE01B4131A532BE200892784 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +417,7 @@
 				BE01B42E1A532BE200892784 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE01B42F1A532BE200892784 /* Build configuration list for PBXNativeTarget "SlotMachineTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +426,7 @@
 				BE01B4311A532BE200892784 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
