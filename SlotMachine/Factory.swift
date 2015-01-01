@@ -26,4 +26,21 @@ class Factory {
     
     return slots
   }
+  
+  class func createSlot(currentCards: [Slot]) -> Slot {
+    var currentCardValues:[Int] = []
+    for slot in currentCards {
+      currentCardValues.append(slot.value)
+    }
+    
+    var randomNumber = Int(arc4random_uniform(UInt32(SlotConstants.allCards.count)))
+    while contains(currentCardValues, randomNumber + 1) {
+      randomNumber = Int(arc4random_uniform(UInt32(SlotConstants.allCards.count)))
+    }
+    
+    let card = SlotConstants.allCards[randomNumber]
+    let slot = Slot(value: card.value, image: card.image, isRed: card.isRed)
+    return slot
+  }
+
 }
