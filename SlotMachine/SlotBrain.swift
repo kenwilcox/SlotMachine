@@ -22,11 +22,21 @@ class SlotBrain {
         flushWinCount += 1
       }
       
+      if checkInARow(slotRow) {
+        println("\(slotRow.count) in a row")
+        winnings += 1
+        straightWinCount += 1
+      }
     }
     
     if flushWinCount == slots.count {
       println("Royal Flush")
       winnings += 15
+    }
+    
+    if straightWinCount == slots.count {
+      println("Epic straight")
+      winnings += 1000
     }
     
     return winnings
@@ -53,4 +63,15 @@ class SlotBrain {
     }
   }
   
+  class func checkInARow(slotRow: [Slot]) -> Bool {
+    var values = slotRow.map({$0.value})
+    values.sort({$0 < $1})
+    
+    for (i, value) in enumerate(values) {
+      if i > 0 && value != values[i - 1] + 1 {
+        return false
+      }
+    }
+    return true
+  }
 }
