@@ -22,6 +22,7 @@ class Factory {
         var slot = Factory.createSlot(slotArray)
         slotArray.append(slot)
       }
+      slots.append(slotArray)
     }
     
     return slots
@@ -37,6 +38,7 @@ class Factory {
     while contains(currentCardValues, randomNumber + 1) {
       randomNumber = Int(arc4random_uniform(UInt32(SlotConstants.allCards.count)))
     }
+    //println("\(currentCardValues.count): \(randomNumber)")
     
     let card = SlotConstants.allCards[randomNumber]
     let slot = Slot(value: card.value, image: card.image, isRed: card.isRed)
