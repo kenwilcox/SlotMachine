@@ -111,8 +111,10 @@ class ViewController: UIViewController {
     if maxBet > 0 && self.currentBet + maxBet <= 5 {
       self.credits -= maxBet
       self.currentBet += maxBet
-    } else {
+    } else if self.credits - maxBet <= 0 {
       showAlertWithText(message: "No more credits to bet!")
+    } else {
+      showAlertWithText(message: "Max Bet Reached!")
     }
   }
   
