@@ -108,7 +108,7 @@ class ViewController: UIViewController {
       maxBet = self.credits
     }
     
-    if maxBet > 0 {
+    if maxBet > 0 && self.currentBet + maxBet <= 5 {
       self.credits -= maxBet
       self.currentBet += maxBet
     } else {
@@ -284,7 +284,7 @@ class ViewController: UIViewController {
   func hardReset() {
     slots.removeAll(keepCapacity: true)
     self.setupSecondContainer(self.secondContainer)
-    self.credits = 4
+    self.credits = 50
     self.winnings = 0
     self.currentBet = 0
   }
