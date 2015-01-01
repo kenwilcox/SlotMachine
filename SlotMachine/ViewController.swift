@@ -124,8 +124,14 @@ class ViewController: UIViewController {
   }
   
   func spinButtonPressed (button: UIButton) {
+    println("Spin")
     self.slots = Factory.createSlots()
     setupSecondContainer(self.secondContainer)
+    
+    var winningMultiplier = SlotBrain.computeWinnings(slots)
+    winnings = winningMultiplier * currentBet
+    credits += winnings
+    currentBet = 0
   }
   
   func setupContainerViews() {
